@@ -11,6 +11,9 @@ const SharePage = () => {
       const result = await axios(
         `/add/${id}`,
       );
+
+
+      
  console.log(result.data['content']);
       setData(result.data['content']);
       console.log(data);
