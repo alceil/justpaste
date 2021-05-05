@@ -9,7 +9,7 @@ const SharePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `http://localhost:2000/add/${id}`,
+        `/add/${id}`,
       );
  console.log(result.data['content']);
       setData(result.data['content']);

@@ -9,10 +9,6 @@ const PORT = process.env.PORT || 2000;
 app.use(cors());
 
 app.use(bodyParser.json());
-// app.get('/',(req,res)=>{
-// res.send("We are live yoyo")
-// }
-// );
 mongoose.connect(process.env.MONGODB_URI,{ useFindAndModify: false , useNewUrlParser: true,useUnifiedTopology: true },()=>console.log('Connected to db'));
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));

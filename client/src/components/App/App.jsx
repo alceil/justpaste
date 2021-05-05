@@ -21,7 +21,7 @@ const App = () => {
     console.log("pressed dude");
     console.log(shareText);
     axios
-      .post("http://localhost:2000/add", { content: shareText })
+      .post("/add", { content: shareText })
       .then((response) => {
         let id = response.data["_id"];
         history.push("/"+id);
