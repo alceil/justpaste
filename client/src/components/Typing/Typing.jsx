@@ -1,12 +1,22 @@
 import React from "react";
+import ShareButton from "../ShareButton/ShareButton";
+import CopyButton from "../CopyButton/CopyButton";
 import style from "./Typing.module.css";
-const Typing = ({ handleInputChange }) => {
+const Typing = ({ handleInputChange,onSubmit }) => {
   return (
     <div>
+    <div data-aos="fade-up"  >
+      
       <textarea
         onChange={(e) => handleInputChange(e.target.value)}
-        className={style.textarea_container}
       ></textarea>
+    </div>
+
+    <div data-aos="fade-up" className={style.share}>
+    <ShareButton  onSubmit={onSubmit} />
+
+    </div>
+
     </div>
   );
 };

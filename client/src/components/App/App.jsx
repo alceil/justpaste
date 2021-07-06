@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
-import ShareButton from "../ShareButton/ShareButton";
+
 import Typing from "../Typing/Typing";
 import axios from "axios";
 import { Route, Switch, useHistory, withRouter } from "react-router-dom";
@@ -20,6 +20,7 @@ const App = () => {
   const onSubmit = (inputValue) => {
     console.log("pressed dude");
     console.log(shareText);
+    //http://localhost:4000
     axios
       .post("/add", { content: shareText })
       .then((response) => {
@@ -37,16 +38,19 @@ const App = () => {
   };
   return (
     <div>
-      <Header headTitle="JustPasteit" />
+      <Header headTitle="Justpasteit" />
       <Switch>
         <Route exact path="/">
-          <Typing handleInputChange={handleInputChange} />
+          <Typing handleInputChange={handleInputChange} onSubmit={onSubmit} />
         </Route>
         <Route exact path="/:id">
           <SharePage />
         </Route>
       </Switch>
-      <ShareButton onSubmit={onSubmit} />
+      <div className={style.container}>
+ 
+      </div>
+    
     </div>
   );
 };

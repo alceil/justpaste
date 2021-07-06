@@ -6,29 +6,19 @@
  */
 }
 
-.textarea_left {
-  width: 50%;
 
-  /* display: flex;
-  
-    flex-grow: 1; */
-}
 
 .textarea_exp{
+  white-space: pre-wrap;
+  overflow-y: auto;
   width: 80%;
-  margin: 10 auto;
+  margin: 10px auto;
   height: 75vh;
   border:  "30px solid green";
   border-style: solid;
 }
 
-.textarea_container {
-  margin: 16px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  width: 80%;
-}
+
 
 .textarea_left,
 .textarea_right {
@@ -48,3 +38,8 @@
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: scroll;
 } */
+.actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
