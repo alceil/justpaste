@@ -22,7 +22,7 @@ const App = () => {
     console.log(shareText);
     //http://localhost:4000
     axios
-      .post("/add", { content: shareText })
+      .post("http://localhost:4000/add", { content: shareText })
       .then((response) => {
         let id = response.data["_id"];
         history.push("/"+id);
